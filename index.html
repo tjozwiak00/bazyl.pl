@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <link rel="stylesheet" type="text/css" href="./styl.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bazyl</title>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src='http://bazyl.pl/PL/images/logo_bazyl.png' class="logo"></a>
+    <a href="#naw" class="menu-icon">&#9776;</a>
+    <nav id="naw">
+      <ul>
+        <li><a href="#">O nas</a></li>
+        <li><a href="./oferta.html">Oferta</a></li>
+        <li><a href="#realizacja">Realizacje</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="info">
+    <h2>O nas</h2>
+    <p>
+  Firma BAZYL Serwis Maszyn Poligraficznych rozpoczęła swoją działalność w 1994 roku, czyli prawie 20lat temu. W tym czasie polska i światowa poligrafia rozwijała się bardzo prężnie. Prowadząc działalność w tym czasie siłą rzeczy nadążać trzeba było za postępem, który napędzały komputery i automatyzacja. Dzięki temu jestem na bieżąco z najnowszymi technologiami stosowanymi zarówno w poligrafii jak i w szeroko rozumianej informatyce.
+
+Posiadam spore doświadczenie w dziedzinie elektroniki, które zdobyłem podczas wieloletniej pracy w Biurze Konstrukcyjno-Badawczym TELKOM TELETRA w Poznaniu. Dodatkowe umiejętności i doświadczenie zdobyłem w czasie 5-letniej praktyki pracownika serwisowego w firmach handlujących maszynami poligraficznymi.
+
+Lata pracy w branży poligraficznej i elektronicznej zachęciły mnie do stworzenia własnego serwisu maszyn poligraficznych, w którym mógłbym doskonalić swoje umiejętności i świadczyć usługi na coraz wyższym poziomie. Liczne kursy i szkolenia z zakresu sprzętu poligraficznego w Szwecji, Danii i Niemczech przygotowały mnie teoretycznie i praktycznie do profesjonalnego prowadzenia takiej działalności.
+
+Aktualnie moja firma działa na rynku już prawie 20 lat. Dzięki tak długiemu stażowi mogę zagwarantować Państwu usługi na najwyższym poziomie. Oferuję zarówno swoje umiejętności jak i zdobyte przez ten czas doświadczenie oraz wiedzę. Doskonale orientuję się w branży poligraficznej, a także w najnowszych rozwiązaniach technologiczno-technicznych i wszelkich innowacjach na rynku maszyn poligraficznych.
+    </p>
+   </div>
+    <a href="./oferta.html" id='oferta'>
+      <div class="banner">
+        <h2>Oferta</h2>
+        <p>Zobacz naszą pełną oferte usług jakie oferuje nasza firma</p>
+       </div>
+    </a>
+    
+    <a href="./realizacje.html" id="realizacje">
+      <div class="banner">
+        <h2>Realizacje</h2>
+        <p>Zapoznaj się ze wszystkimi naszymi realizacjami</p>
+      </div>
+    </a>
+
+    <a href="./galeria.html" id="galeria">
+      <div class="banner">
+        <h2>Galeria</h2>
+      </div>
+    </a>
+
+    <a href="./kontakt.html" id="kontakt">
+      <div class="banner">
+        <h2>Kontakt</h2>
+      </div>
+    </a>
+  <script>
+    // Kod JavaScript
+  const banners = document.querySelectorAll('.banner');
+  const info = document.querySelectorAll('#info');
+
+  window.onload = function (){
+    info.children[1].style.display = 'none';
+  }
+  banners.forEach((banner) => {
+    banner.addEventListener('mouseover', () => {
+      banner.style.height = '150px';
+    });
+
+    banner.addEventListener('mouseout', () => {
+      banner.style.height = '50px';
+    });
+  });
+
+  info.forEach((info) => {
+    info.addEventListener('mouseover', () => {
+      info.style.height = 'auto';
+      info.children[1].style.display = 'block';
+    });
+
+    info.addEventListener('mouseout', () => {
+      info.style.height = '50px';
+      info.children[1].style.display = 'none';
+
+    });
+  });
+
+  document.querySelectorAll('.menu-icon')[0].addEventListener('click', () => {
+    document.querySelector('#naw').style.display = 'block';
+  })
+
+</script>
+</body>
+</html>
